@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcommerceModel4.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ProductTable">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="int" Nullable="false" />
+    <Property Name="Product_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prodecut_Desc" Type="nvarchar(max)" />
+    <Property Name="Image_1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image_2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image_3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="int" />
+    <Property Name="Stock" Type="int" />
+    <Property Name="Category_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EcommerceModel4StoreContainer">
+    <EntitySet Name="ProductTable" EntityType="Self.ProductTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

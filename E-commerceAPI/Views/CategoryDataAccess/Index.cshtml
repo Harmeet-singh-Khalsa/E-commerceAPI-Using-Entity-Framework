@@ -1,0 +1,53 @@
+﻿@model IEnumerable<E_commerceAPI.CategoryTable>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        h1 {
+            color: blue;
+            padding-bottom: 20px;
+        }
+
+        th {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Category Table Details</h1>
+
+        <table class="table" border="1">
+            <tr>
+                <th>Category ID</th>
+                <th>Category Name</th>
+                <th>Category Description</th>
+
+            </tr>
+            @foreach (CategoryTable category in Model)
+            {
+        <tr>
+            <td>@category.Category_ID</td>
+            <td>@category.Category_Nmae</td>
+            <td>@category.Category_Description</td>
+
+
+        </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

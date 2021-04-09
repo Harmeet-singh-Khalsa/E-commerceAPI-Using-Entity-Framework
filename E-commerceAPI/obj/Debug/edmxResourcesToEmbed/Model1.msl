@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EcommerceModel1StoreContainer" CdmEntityContainer="CategoryDataEntity">
+    <EntitySetMapping Name="CategoryTables">
+      <EntityTypeMapping TypeName="EcommerceModel1.CategoryTable">
+        <MappingFragment StoreEntitySet="CategoryTable">
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+          <ScalarProperty Name="Category_Nmae" ColumnName="Category_Nmae" />
+          <ScalarProperty Name="Category_Image" ColumnName="Category_Image" />
+          <ScalarProperty Name="Category_Description" ColumnName="Category_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

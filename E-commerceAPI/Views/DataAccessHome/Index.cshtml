@@ -1,0 +1,63 @@
+﻿@model IEnumerable<E_commerceAPI.CustomerTable>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        h1{
+            color: blue;
+            padding-bottom:20px;
+
+        }
+        
+        th{
+            font-size:15px;
+            padding : 10px;
+        }
+        .table {
+            border-collapse: collapse;
+            text-align :  center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Customer Table Details</h1>
+        
+        <table class="table" border="1">
+            <tr>
+                <th>Customer ID</th>
+                <th>Customer Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>Post Code</th>
+                <th>City</th>
+                <th>Phone</th>
+            </tr>
+            @foreach (CustomerTable customer in Model)
+            {
+        <tr>
+            <td>@customer.Customer_ID</td>
+            <td>@customer.Customer_Email</td>
+            <td>@customer.First_Name</td>
+            <td>@customer.Last_Name</td>
+            <td>@customer.Password</td>
+            <td>@customer.Address</td>
+            <td>@customer.PostCode</td>
+            <td>@customer.City</td>
+            <td>@customer.Phone</td>
+
+        </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

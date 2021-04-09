@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcommerceModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.Order_DetailsTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Order_DetailsTable">
+    <Key>
+      <PropertyRef Name="Order_Details_ID" />
+    </Key>
+    <Property Name="Order_Details_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product_ID" Type="int" />
+    <Property Name="Product_Qty" Type="int" />
+    <Property Name="Product_Price" Type="int" />
+    <Property Name="Order_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subtotal" Type="int" />
+  </EntityType>
+  <EntityContainer Name="EcommerceModel2StoreContainer">
+    <EntitySet Name="Order_DetailsTable" EntityType="Self.Order_DetailsTable" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Order_DetailsTable].[Order_Details_ID] AS [Order_Details_ID], 
+[Order_DetailsTable].[Product_ID] AS [Product_ID], 
+[Order_DetailsTable].[Product_Qty] AS [Product_Qty], 
+[Order_DetailsTable].[Product_Price] AS [Product_Price], 
+[Order_DetailsTable].[Order_ID] AS [Order_ID], 
+[Order_DetailsTable].[Subtotal] AS [Subtotal]
+FROM [dbo].[Order_DetailsTable] AS [Order_DetailsTable]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

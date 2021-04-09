@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcommerceModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CategoryTable">
+    <Key>
+      <PropertyRef Name="Category_ID" />
+    </Key>
+    <Property Name="Category_ID" Type="Int32" Nullable="false" />
+    <Property Name="Category_Nmae" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category_Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CategoryDataEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CategoryTables" EntityType="Self.CategoryTable" />
+  </EntityContainer>
+</Schema>

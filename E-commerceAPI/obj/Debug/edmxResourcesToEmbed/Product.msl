@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EcommerceModel4StoreContainer" CdmEntityContainer="ProductDataEntity">
+    <EntitySetMapping Name="ProductTables">
+      <EntityTypeMapping TypeName="EcommerceModel4.ProductTable">
+        <MappingFragment StoreEntitySet="ProductTable">
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Prodecut_Desc" ColumnName="Prodecut_Desc" />
+          <ScalarProperty Name="Image_1" ColumnName="Image_1" />
+          <ScalarProperty Name="Image_2" ColumnName="Image_2" />
+          <ScalarProperty Name="Image_3" ColumnName="Image_3" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<E_commerceAPI.OrderTable>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        h1 {
+            color: blue;
+            padding-bottom: 20px;
+        }
+
+        th {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Order Table Details</h1>
+
+        <table class="table" border="1">
+            <tr>
+                <th>Customer ID</th>
+                <th>Order No.</th>
+                <th>Order Date</th>
+                <th>Order Total</th>
+                <th>Customer ID</th>
+                <th>Shipping Date</th>
+                <th>Is Delvered</th>
+               
+            </tr>
+            @foreach (OrderTable order in Model)
+            {
+        <tr>
+            <td>@order.Order_ID</td>
+            <td>@order.Order_No</td>
+            <td>@order.Order_Date</td>
+            <td>@order.Order_Total</td>
+            <td>@order.Customer_ID</td>
+            <td>@order.Shipping_Date</td>
+            <td>@order.Is_Delivered</td>
+
+
+        </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

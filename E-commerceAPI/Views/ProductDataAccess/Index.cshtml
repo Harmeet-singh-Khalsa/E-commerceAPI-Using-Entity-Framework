@@ -1,0 +1,63 @@
+﻿@model IEnumerable<E_commerceAPI.ProductTable>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        h1 {
+            color: blue;
+            padding-bottom: 20px;
+        }
+
+        th {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Product Table Details</h1>
+
+        <table class="table" border="1">
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Description</th>
+                <th>Image 1</th>
+                <th>Image 2</th>
+                <th>Image 3</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Category ID</th>
+            </tr>
+            @foreach (ProductTable product in Model)
+            {
+        <tr>
+            <td>@product.Product_ID</td>
+            <td>@product.Product_Name</td>
+            <td>@product.Prodecut_Desc</td>
+            <td>@product.Image_1</td>
+            <td>@product.Image_2</td>
+            <td>@product.Image_3</td>
+            <td>@product.Price</td>
+            <td>@product.Stock</td>
+            <td>@product.Category_ID</td>
+
+        </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
