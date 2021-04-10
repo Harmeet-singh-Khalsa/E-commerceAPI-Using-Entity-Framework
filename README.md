@@ -16,3 +16,6 @@ https://localhost:44375/OrderDataAccess/Index
 
 
 https://localhost:44375/ProductDDataAccess/Index
+
+
+You can see the Output in the Output Images files above👆.
