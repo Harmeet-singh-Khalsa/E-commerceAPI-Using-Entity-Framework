@@ -1,6 +1,6 @@
 # E-commerceAPI-Using-Entity-Framework
 
-To access the Data use the name of the controller file.
+To access the Data use the name of the controller file
 like:
 
 https://localhost:44375/DataAccessHome/Index
